@@ -1,0 +1,34 @@
+.mindmap{
+    position: relative;
+}
+
+.ifr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 105px);
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.error{
+    color: var(--gray-color);
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+    text-align: center;
+}
+
+@media (max-width: 540px) {
+    .ifr {
+        height: calc(100vh - 58px);
+    }
+    .error{
+        height: calc(100vh - 62px);
+    }
+}
+

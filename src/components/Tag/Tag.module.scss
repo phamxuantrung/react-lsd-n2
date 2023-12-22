@@ -1,0 +1,13 @@
+.wrapper{
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    height: fit-content;
+    width: fit-content;
+}
+
+.done{
+    background-color: #12b86d1b;
+    color: var(--bs-success);
+}

@@ -1,0 +1,44 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--h-header);
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    span{
+        margin: 0 6px;
+    }
+}
+
+.logo {
+    cursor: pointer;
+    img{
+        width: 36px;
+        border-radius: 2px;
+    }
+}
+
+.item {
+    color: rgb(55 65 81 / 1);
+    font-weight: 500;
+    padding: 0 12px;
+
+    &.active {
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+}
+
+
+@media (max-width: 760px) {
+    .wrapper {
+        padding: 10px 16px;
+    }
+    .navbar{
+        display: none;
+    }
+}

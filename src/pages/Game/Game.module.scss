@@ -1,0 +1,140 @@
+.wrapper {
+    padding: 32px calc(8px + 1%) 32px calc(8px + 1%);
+}
+.card-game {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
+}
+
+.item {
+    background-color: red;
+    border-radius: 16px;
+    position: relative;
+    min-height: 200px;
+    margin-top: 40px;
+
+
+    img {
+        width: 280px;
+        position: absolute;
+        bottom: -10%;
+        right: 5%;
+    }
+
+    .infor{
+        position: absolute;
+        width: calc(100% - 280px - 5%);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        z-index: 10;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 16px 32px;
+        h1{
+            font-size: calc(12px + 0.8vw);
+            text-transform: uppercase;
+            color: white;
+            font-weight: bold;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        p{
+            color: #ffffffbe;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: calc(8px + 0.2vw);
+            margin: 8px 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        div{
+            margin-top: 6px;
+            width: fit-content;
+            padding: 8px 16px;
+            background-color: #ffffff28;
+            color: white;
+            font-weight: 600;
+            font-size: calc(11px + 0.2vw);
+            border-radius: 8px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.307);
+            }
+        }
+    }
+
+    .overlay {
+        border-radius: 16px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        &.type1 {
+            background: linear-gradient(
+                90deg,
+                rgba(31, 121, 255, 0.8) 60%,
+                rgba(49, 147, 252, 0.8)
+            );
+        }
+        &.type2 {
+            background: linear-gradient(
+                90deg,
+                rgba(250, 69, 99, 0.8) 60%,
+                rgba(255, 115, 0, 0.8)
+            );
+        }
+    }
+}
+
+@media (max-width: 1340px) {
+    .card-game {
+        grid-template-columns: auto;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .item{
+        min-height: 180px;
+        margin-top: 8px;
+        .infor{
+            width: calc(100% - 180px - 5%);
+        }
+        img{
+            width: 200px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 5%;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+
+    .item{
+        min-height: 150px;
+        margin-top: 8px;
+        .infor{
+            width: calc(100% - 150px - 5%);
+        }
+        img{
+            width: 150px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 5%;
+        }
+    }
+
+    .card-game {
+        row-gap: 8px;
+        column-gap: 0;
+    }
+}

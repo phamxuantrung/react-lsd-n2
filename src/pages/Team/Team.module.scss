@@ -1,0 +1,116 @@
+.wrapper{
+    padding: 12px;
+}
+
+.team{
+    border: 2px solid #eef0f9;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 16px;
+    height: calc(100vh - 132px);
+    overflow-y: auto;
+
+    .heading{
+        font-size: 18px;
+        font-weight: 500;
+        padding-bottom: 12px;
+    }
+}
+
+.title{
+    padding: 12px 16px;
+    margin: 0 -16px;
+    background-color: #f9fbfc;
+    position: sticky;
+    top: -16px;
+    right: 0;
+    left: 0;
+
+    div{
+        color: var(--gray-color);
+    }
+}
+
+.member{
+    margin: 12px 0;
+    padding: 6px 0;
+    border-bottom: 1px solid #eef0f9;
+}
+
+.member > p{
+    line-height: 45px;
+}
+
+.member > div{
+    display: flex;
+    align-items: center;
+}
+
+.title, .member{
+    display: grid;
+    grid-template-columns: 30% 20% auto 25%;
+    gap: 12px;
+    div, p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.infor{
+    display: flex;
+    align-items: center;
+    img{
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+}
+
+.name{
+    display: none;
+}
+
+@media (max-width: 760px){
+    .fullname{
+        display: none;
+    }
+    .name{
+        display: block;
+    }
+}
+
+@media (max-width: 640px){
+    .title, .member{
+        grid-template-columns: 40% 20% auto;
+    }
+
+    .member > div:last-child{
+        display: none !important;
+    }
+
+    .title > p:last-child{
+        display: none !important;
+    }
+}
+
+@media (max-width: 540px){
+
+    .team{
+        height: calc(100vh - 94px);
+    }
+
+    .title, .member{
+        grid-template-columns: 50% auto;
+    }
+
+    .member > div:nth-child(2){
+        display: none !important;
+    }
+
+    .title > p:nth-child(2){
+        display: none !important;
+    }
+}
